@@ -22,6 +22,7 @@ public class Provider {
 
     public double[] getValues(String sheetName, int numberOfColumn) {
         XSSFSheet sheet = this.wb.getSheet(sheetName);
+
         double[] values = new double[sheet.getLastRowNum()];
         for (int i = 1; i <= sheet.getLastRowNum(); i++) {
             Row row = sheet.getRow(i);
